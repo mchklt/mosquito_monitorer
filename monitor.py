@@ -3,7 +3,7 @@ from datetime import datetime
 import sys
 
 if len(sys.argv) < 2:
-    print("Usage: python mosquito_monitorer.py <broker>")
+    print("Usage: python mosquito_monitorer.py <host>")
     sys.exit(1)
 
 BROKER = sys.argv[1]
