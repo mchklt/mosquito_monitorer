@@ -52,4 +52,24 @@ Filtered messages are saved to `mqtt_logs_filtered.txt` like so:
 {"temperature": 21.5, "humidity": 42}
 ```
 
-Only payloads not exactly 29 characters long are saved.
+## Tips & Tricks for MQTT Pentesting
+
+* Use `mosquitto_sub` to quickly subscribe to all topics:
+
+  ```bash
+  mosquitto_sub -h <broker> -t '#' -v
+  ```
+
+* Use `mosquitto_pub` to send test messages:
+
+  ```bash
+  mosquitto_pub -h <broker> -t 'topic/test' -m 'your message'
+  ```
+
+* Filter out fixed-length heartbeat messages to focus on useful data.
+
+* Check for retained messages with `mosquitto_sub -r`.
+
+* Verify if the broker allows anonymous connections or requires authentication.
+
+Mastering MQTT means seeing beyond noise spotting the real signals hiding in the chatter. With tools like `mosquito_monitorer` and `mosquitto_sub`, you can unveil secrets, test defenses, and control the invisible data streams powering today’s connected world. Stay curious, stay sharp, and hack responsibly.
