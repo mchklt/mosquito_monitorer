@@ -30,10 +30,15 @@ Run the script and provide your MQTT broker address as the first argument:
 python mosquito_monitorer.py <broker>
 ```
 
+i prefer use it with nohup 
+
+```bash
+nohup python mosquito_monitorer.py <broker> &
+```
 Example:
 
 ```bash
-python mosquito_monitorer.py broker.hivemq.com
+nohup python mosquito_monitorer.py broker.hivemq.com &
 ```
 
 If no broker is specified, the script will exit with a usage message.
